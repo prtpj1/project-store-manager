@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "4bfe5f1c-eb4f-4f6e-885d-773a91a3c194",
+    "name": "localenv",
+    "default": true,
+    "sortNum": 20000,
+    "created": "2022-06-30T22:43:55.441Z",
+    "modified": "2022-06-30T22:44:03.178Z",
+    "data": [
+      {
+        "name": "local",
+        "value": "http://localhost:3000"
+      }
+    ]
+  }
+]

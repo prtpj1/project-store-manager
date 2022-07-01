@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "32d45c3e-c3e2-425a-a7d7-59ebf3f1681f",
+    "colName": "StoreManager",
+    "created": "2022-06-30T21:07:38.362Z",
+    "sortNum": 10000,
+    "folders": [],
+    "settings": {
+      "headers": [],
+      "tests": [],
+      "envId": "67043c07-0a2b-4a7f-9887-53e80c03870f"
+    }
+  }
+]
