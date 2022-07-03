@@ -24,7 +24,19 @@ const getById = async (req, res, next) => {
   }
 };
 
+const postProduct = async (req, res, next) => {
+  try {
+    const { name } = req.body;
+    const newProduct = await productsS.postProduct(name);
+
+    res.status(201).json(newProduct);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   getAll,
   getById,
+  postProduct,
 };
