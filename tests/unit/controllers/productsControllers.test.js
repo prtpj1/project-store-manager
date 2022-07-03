@@ -72,6 +72,9 @@ describe('Testing products in layer Controllers', () => {
     describe('Add a new product to DB', () => {
     const req = {};
     const res = {};
+      req.body = {
+      name: 'Example product',
+    };
 
     beforeEach(() => {
       res.status = sinon.stub().returns(res);
