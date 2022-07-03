@@ -1,11 +1,11 @@
 const express = require('express');
 
 const router = express.Router();
-const productsControllers = require('../controllers/productsControllers');
+const productsC = require('../controllers/productsC');
 
-router.get('/:id', productsControllers.getById);
+router.get('/', productsC.getAll);
 
-router.get('/', productsControllers.getAll);
+router.get('/:id', productsC.getById);
 
 // router.get('/', (req, res, next) => { next('No route found'); });
 
