@@ -34,4 +34,29 @@ describe('Testing products in layer Services', () => {
       expect(response).to.be.an('array');
     });
   });
+
+    describe('Add a new product to DB', () => {
+      const mockPayLoadProduct = {
+      name: 'Example product',
+      };
+      const productID = 1;
+      
+      beforeEach(() => {
+        sinon.stub(productsM, 'postProduct').resolves({id: productID});
+      });
+
+      afterEach(() => { 
+        productsM.postProduct.restore();
+    });
+
+    it('The response returns an object', async () => {
+      const response = await productsS.postProduct(mockPayLoadProduct);
+      expect(response).to.be.an('object');
+    });
+
+      it('the object with the new product has a "id"', async () => {
+        const response = await productsS.postProduct(mockPayLoadProduct);
+        expect(response).to.have.property('id');
+      });
+  });
 });

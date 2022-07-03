@@ -26,4 +26,29 @@ describe('Testing products in layer Models', () => {
       expect(response).to.be.an('object');
     });
   });
+
+  describe('Add a new product to DB', () => {
+    const mockPayLoadProduct = {
+      name: 'Example product',
+    };
+
+    beforeEach(async () => {
+      const execute = [{ insertId: 1 }];
+      sinon.stub(connection, 'execute').resolves(execute);
+    })
+
+    afterEach(async () => { 
+      connection.execute.restore();
+    });
+
+    it('The response returns an object', async () => {
+      const response = await productsM.postProduct(mockPayLoadProduct);
+      expect(response).to.be.an('object');
+    });
+
+    it('the object with the new product has a "id"', async () => {
+      const response = await productsM.postProduct(mockPayLoadProduct);
+      expect(response).to.have.property('id');
+    })
+  });
 });
