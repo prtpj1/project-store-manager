@@ -32,32 +32,30 @@ const postProduct = async (req, res) => {
 
     res.status(201).json(newProduct);
   } catch (error) {
-    res.status(500).json(error);
+  console.log('🚀 ~ postProduct error', error);
   }
 };
 
-/* const postProduct = async (req, res) => {
+const putProduct = async (req, res) => {
   try {
-    const { error } = Joi.object({
-      name: Joi.string().required().min(5),
-    }).validate(req.body);
-
-    if (error) return next(error);
-
     const { name } = req.body;
-    const newProduct = await productsS.postProduct(name);
+    const { id } = req.params;
 
-    if (newProduct.message) return res.status(422).json({ message: newProduct.message });
+    const updProduct = await productsS.putProduct(id, name);
 
-    res.status(201).json(newProduct);
+    if (!updProduct.id) {
+      return res.status(404).json({ message: 'Product not found' });
+    }
+    
+    return res.status(200).json(updProduct);
   } catch (error) {
-    next(error);
-  // console.log('🚀 ~ postProduct error', error);
+    console.log('🚀 ~ putProduct error', error);
   }
-}; */
+};
 
 module.exports = {
   getAll,
   getById,
   postProduct,
+  putProduct,
 };

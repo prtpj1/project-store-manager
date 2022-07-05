@@ -15,8 +15,18 @@ const postProduct = async (name) => {
   return newProduct;
 };
 
+const putProduct = async (id, name) => {
+  const getProductId = await productsM.getById(id);
+  if (getProductId.length < 1) {
+    return { error: { status: 404, message: 'Product not found with this ID' } };
+  }
+  const updProduct = await productsM.putProduct(id, name);
+  return updProduct;
+};
+
 module.exports = {
   getAll,
   getById,
   postProduct,
+  putProduct,
 };
