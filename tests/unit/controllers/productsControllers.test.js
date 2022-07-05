@@ -15,7 +15,7 @@ describe('Testing products in layer Controllers', () => {
 
     beforeEach(async () => {
       res.status = sinon.stub().returns(res);
-      res.json = sinon.stub().returns();
+      res.json = sinon.stub().returns(res);
       sinon.stub(productsS, 'getAll').resolves(product);
     });
 

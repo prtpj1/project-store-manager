@@ -10,14 +10,11 @@ const errorMiddleware = require('./middlewares/errorMiddleware');
 app.get('/', (_request, response) => {
   response.send();
 });
+//! não remova essa exportação, é para o avaliador funcionar
+// você pode registrar suas rotas normalmente, como o exemplo acima
+// você deve usar o arquivo index.js para executar sua aplicação
 
-// TODO -----------------------------------------------------------------------------
 app.use('/products', productsRouter);
 
 app.use(errorMiddleware);
-// TODO -----------------------------------------------------------------------------
-
-//! não remova essa exportação, é para o avaliador funcionar
-// você pode registrar suas rotas normalmente, como o exemplo acima
-// você deve usar o arquivo index.js para executar sua aplicação 
 module.exports = app;
