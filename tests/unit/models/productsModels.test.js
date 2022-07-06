@@ -2,7 +2,7 @@ const sinon = require('sinon');
 const { expect } = require('chai');
 
 const connection = require('../../../models/connections');
-const productsM = require('../../../models/productsM');
+const productsModels = require('../../../models/productsModels');
 
 describe('Testing products in layer Models', () => {
   describe('Testing getAll response from DB', () => {
@@ -17,12 +17,12 @@ describe('Testing products in layer Models', () => {
     });
 
     it('products.getAll returns an object', async () => {
-      const response = await productsM.getAll();
+      const response = await productsModels.getAll();
       expect(response).to.be.an('object');
     });
     
     it('products.getById returns an object', async () => {
-      const response = await productsM.getById();
+      const response = await productsModels.getById();
       expect(response).to.be.an('object');
     });
   });
@@ -42,12 +42,12 @@ describe('Testing products in layer Models', () => {
     });
 
     it('The response returns an object', async () => {
-      const response = await productsM.postProduct(mockPayLoadProduct);
+      const response = await productsModels.postProduct(mockPayLoadProduct);
       expect(response).to.be.an('object');
     });
 
     it('the object with the new product has a "id"', async () => {
-      const response = await productsM.postProduct(mockPayLoadProduct);
+      const response = await productsModels.postProduct(mockPayLoadProduct);
       expect(response).to.have.property('id');
     })
   });

@@ -1,8 +1,8 @@
 const sinon = require('sinon');
 const { expect } = require('chai');
 
-const productsM = require('../../../models/productsM');
-const productsS = require('../../../services/productsS');
+const productsModels = require('../../../models/productsModels');
+const productsServices = require('../../../services/productsServices');
 
 describe('Testing products in layer Services', () => {
   describe('Testing getAll response from DB', () => {
@@ -22,15 +22,15 @@ describe('Testing products in layer Services', () => {
     ];
 
     beforeEach(async () => {
-      sinon.stub(productsM, 'getAll').resolves(products);
+      sinon.stub(productsModels, 'getAll').resolves(products);
     });
 
     afterEach(async () => {
-      productsM.getAll.restore();
+      productsModels.getAll.restore();
     });
 
     it('products.getAll returns an array', async () => {
-      const response = await productsS.getAll();
+      const response = await productsServices.getAll();
       expect(response).to.be.an('array');
     });
   });
@@ -42,20 +42,20 @@ describe('Testing products in layer Services', () => {
       const productID = 1;
       
       beforeEach(() => {
-        sinon.stub(productsM, 'postProduct').resolves({id: productID});
+        sinon.stub(productsModels, 'postProduct').resolves({id: productID});
       });
 
       afterEach(() => { 
-        productsM.postProduct.restore();
+        productsModels.postProduct.restore();
     });
 
     it('The response returns an object', async () => {
-      const response = await productsS.postProduct(mockPayLoadProduct);
+      const response = await productsServices.postProduct(mockPayLoadProduct);
       expect(response).to.be.an('object');
     });
 
       it('the object with the new product has a "id"', async () => {
-        const response = await productsS.postProduct(mockPayLoadProduct);
+        const response = await productsServices.postProduct(mockPayLoadProduct);
         expect(response).to.have.property('id');
       });
   });

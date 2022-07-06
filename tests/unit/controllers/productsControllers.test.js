@@ -1,8 +1,8 @@
 const sinon = require('sinon');
 const { expect } = require('chai');
 
-const productsS = require('../../../services/productsS');
-const productsC = require('../../../controllers/productsC');
+const productsServices = require('../../../services/productsServices');
+const productsControllers = require('../../../controllers/productsControllers');
 
 describe('Testing products in layer Controllers', () => {
   describe('Testing getAll response from DB', () => {
@@ -16,20 +16,20 @@ describe('Testing products in layer Controllers', () => {
     beforeEach(async () => {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns(res);
-      sinon.stub(productsS, 'getAll').resolves(product);
+      sinon.stub(productsServices, 'getAll').resolves(product);
     });
 
     afterEach(async () => {
-      productsS.getAll.restore();
+      productsServices.getAll.restore();
     });
 
     it('The response calls the method "status" with code 200', async () => {
-      await productsC.getAll(req, res);
+      await productsControllers.getAll(req, res);
       expect(res.status.calledWith(200)).to.be.true;
     });
 
     it('The response calls the method "json" returning an object', async () => {
-      await productsC.getAll(req, res);
+      await productsControllers.getAll(req, res);
       expect(res.json.calledWith(sinon.match.object)).to.be.true;
     });
   });
@@ -45,23 +45,23 @@ describe('Testing products in layer Controllers', () => {
     beforeEach(async () => {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns();
-      sinon.stub(productsS, 'getById').resolves(product);
+      sinon.stub(productsServices, 'getById').resolves(product);
     }
     );
 
     afterEach(async () => {
-      productsS.getById.restore();
+      productsServices.getById.restore();
     }
     );
 
     it('The response calls the method "status" with code 200', async () => {
-      await productsC.getById(req, res);
+      await productsControllers.getById(req, res);
       expect(res.status.calledWith(200)).to.be.true;
     }
     );
 
     it('The response calls the method "json" returning an object', async () => {
-      await productsC.getById(req, res);
+      await productsControllers.getById(req, res);
       expect(res.json.calledWith(sinon.match.object)).to.be.true;
     }
     );
@@ -79,20 +79,20 @@ describe('Testing products in layer Controllers', () => {
     beforeEach(() => {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns();
-      sinon.stub(productsS, 'postProduct').resolves(true);
+      sinon.stub(productsServices, 'postProduct').resolves(true);
     });
 
     afterEach(() => { 
-      productsS.postProduct.restore();
+      productsServices.postProduct.restore();
     });
 
     it('The response calls the method "status" with code 201', async () => {
-      await productsC.postProduct(req, res);
+      await productsControllers.postProduct(req, res);
       expect(res.status.calledWith(201)).to.be.true;
     });
       
     it('The response calls the method "json" with an object', async () => {
-      await productsC.postProduct(req, res);
+      await productsControllers.postProduct(req, res);
       expect(res).to.be.an('object');
     });
   });
