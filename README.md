@@ -12,13 +12,13 @@
 <hr/>
 
 ## Descrição do Projeto
-Neste projeto de BackEnd desenvolvi uma API RESTFul utilizando a arquitetura MSC(model-service-controller)!<br>
+Neste projeto de BackEnd desenvolvi uma API RESTFul utilizando a arquitetura MSC (model-service-controller)!<br>
 A API construída é um sistema de gerenciamento de vendas no formato dropshipping.<br>
-Foi utilizado um bando de dados MySQL para a gestão dos dados.<br>
+Foi utilizado um banco de dados MySQL para a gestão dos dados.<br>
 
 ## Nesse projeto, aprendi e coloquei em prática:
-- Criar endpoints para listar, criar, atualizar/editar e deletar produtos em um bando de dados MySQL
-- Criar endpoints para listar vendas em um bando de dados MySQL
+- Criar endpoints para listar, criar, atualizar/editar e deletar produtos em um banco de dados MySQL
+- Criar endpoints para listar vendas em um banco de dados MySQL
 ## De acordo com os requisitos do projeto designados pela Trybe aprendi como:
 - ✅ Criar endpoints para listar todos produtos
 - ✅ Criar endpoints para procurar um produto através da id cadastrada
@@ -39,6 +39,7 @@ Foi utilizado um bando de dados MySQL para a gestão dos dados.<br>
 ### BackEnd:
 - MySQL
 - Node.js
+
 <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/mySQL2.png?raw=true" width="50" height="50" alt="MySQL Icon" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/NodeJS2.png?raw=true" width="50" height="50" alt="NodeJS Icon" /></a>
 <hr/>
 
@@ -66,13 +67,13 @@ Foi utilizado um bando de dados MySQL para a gestão dos dados.<br>
 - No programa escolhido, crie as requisições do CRUD como explicado abaixo:<br>
 
 ### ♻️ Listar todos os produtos:
-➡️ Endpoint: **GET** `http://localhost:3000/products`
-<br><br>
+➡️ Endpoint: **GET** `http://localhost:3000/products` <br>
+<hr/>
 
 ### ♻️ Procurar um produto pela id:
-➡️ Endpoint: **GET** `http://localhost:3000/products/2`
+➡️ Endpoint: **GET** `http://localhost:3000/products/2` <br>
 ⚠️ _*O id é o numero no final do endpoint*_
-<br><br>
+<hr/>
 
 ### ♻️ Criar um produto novo:
 ➡️ Endpoint: **POST** `http://localhost:3000/products` <br>
@@ -82,10 +83,10 @@ Em **Body** selecione JSON e coloque o JSON abaixo definindo nome do novo produt
 	"name": "Produto"
 }
 ```
-<br>
+<hr/>
 
 ### ♻️ Editar um produto através do id:
-➡️ Endpoint: **PUT** `http://localhost:3000/products/4`
+➡️ Endpoint: **PUT** `http://localhost:3000/products/4` <br>
 ⚠️ _*O id é o numero no final do endpoint*_
 Em **Body** selecione JSON e coloque o JSON abaixo, alterando nome de um produto já cadastrado:<br>
 
@@ -94,21 +95,21 @@ Em **Body** selecione JSON e coloque o JSON abaixo, alterando nome de um produto
     "name": "Novo nome"
 }
 ```
-<br>
+<hr/>
 
 ### ♻️ Apagar um produto através do id:
-➡️ Endpoint: **DELETE** `http://localhost:3000/4`
+➡️ Endpoint: **DELETE** `http://localhost:3000/4` <br>
 ⚠️ _*O id é o numero no final do endpoint*_
-<br>
+<hr/>
 
 ### ♻️ Listar todas as vendas:
 ➡️ Endpoint: **GET** `http://localhost:3000/sales`
-<br><br>
+<hr/>
 
 ### ♻️ Procurar uma venda pela id:
-➡️ Endpoint: **GET** `http://localhost:3000/sales/1`
+➡️ Endpoint: **GET** `http://localhost:3000/sales/1` <br>
 ⚠️ _*O id é o numero no final do endpoint*_
-<br><br>
+<br>
 
 
 _*OBS: Se tiver alguma dificuldade com as instruções e quiser dar um feedback me mande uma mensagem*_
