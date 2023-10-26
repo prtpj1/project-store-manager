@@ -55,11 +55,13 @@ Foi utilizado um bando de dados MySQL para a gestão dos dados.<br>
 - Defina para usar a porta 3306 e no arquivo .env _*(que está na raiz do projeto com o nome \".env_example" e que você deve alterar para ".env")*_ coloque a mesma senha que você definiu quando criou a conexão MySQL<br>
 `npm install`
 - Para criar o banco de dados _*(a senha solicitada será a da sua distro)*_: <br>
-`mysql -u root -p -e "source migration.sql"`
+`npm run migration"`
 - Para popular o banco de dados _*(a senha solicitada será a da sua distro)*_: <br>
-`mysql -u root -p -e "source seed.sql"`
+`npm run seed`
 - Inicie o programa: <br>
 `npm start`
+- Você poderá ver a cobertura de testes através do comando: <br>
+`npm run test:mocha`
 - Abra o programa para fazer requisições HTTP. Eu usei o Insomnia, mas você pode usar: o Postman, Extensões do VSCode ou qualquer outra que preferir. <br><br>
 - No programa escolhido, crie as requisições do CRUD como explicado abaixo:<br>
 
