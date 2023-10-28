@@ -54,9 +54,8 @@ Foi utilizado um banco de dados MySQL para a gestão dos dados.<br>
 `npm install`
 - Crie _*(se ainda não tiver uma)*_ conexão MySQL no programa de sua escolha para manipulação de banco de dados, como o WorkBench. 
 - Defina para usar a porta 3306 e no arquivo .env _*(que está na raiz do projeto com o nome \".env_example" e que você deve alterar para ".env")*_ coloque a mesma senha que você definiu quando criou a conexão MySQL<br>
-`npm install`
 - Para criar o banco de dados _*(a senha solicitada será a da sua distro)*_: <br>
-`npm run migration"`
+`npm run migration`
 - Para popular o banco de dados _*(a senha solicitada será a da sua distro)*_: <br>
 `npm run seed`
 - Inicie o programa: <br>
