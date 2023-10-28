@@ -1,6 +1,6 @@
 # 22º Projeto: Store Manager
 <p align="center">
-<img src="?raw=true" alt="Header" />
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/22%20-%20StoreManager.jpg?raw=true" alt="Header" />
 <hr/>
 <p align="center">
 <a href="#descrição-do-projeto">Descrição do Projeto</a> •
