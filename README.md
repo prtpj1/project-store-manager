@@ -62,7 +62,7 @@ Foi utilizado um banco de dados MySQL para a gestão dos dados.<br>
 - Inicie o programa: <br>
 `npm start`
 - Você poderá ver a cobertura de testes através do comando: <br>
-`npm run test:mocha`
+`npm run test`
 - Abra o programa para fazer requisições HTTP. Eu usei o Insomnia, mas você pode usar: o Postman, Extensões do VSCode ou qualquer outra que preferir. <br><br>
 - No programa escolhido, crie as requisições do CRUD como explicado abaixo:<br>
 
