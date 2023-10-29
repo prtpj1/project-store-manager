@@ -1,0 +1,172 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Store Manager",
+        "description": "CRUD API for products and sales of a store",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/products": {
+            "get": {
+                "description": "list all products of database",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "add a new product to database",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/products/{id}": {
+            "get": {
+                "description": "list the product with the given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "Type the product id here..."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "put": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "Type the product id here..."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Type the new name of the product with the given id above",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "delete": {
+                "description": "delete from database the product with the given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "Type the product id here..."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Product deleted from database"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+            
+        },
+        
+        "/sales": {
+            "get": {
+                "description": "list all products of database",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/sales/{id}": {
+            "get": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "Type the sale id here..."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+            
+        }
+    }
+}

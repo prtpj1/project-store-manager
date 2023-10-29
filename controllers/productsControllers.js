@@ -6,7 +6,7 @@ const getAll = async (req, res) => {
     const data = await productsServices.getAll();
     res.status(200).json(data);
   } catch (error) {
-  console.log('🚀 ~ getAll Product error', error);
+    console.log('🚀 ~ getAll Product error', error);
   }
 };
 
@@ -21,7 +21,7 @@ const getById = async (req, res) => {
     }
     res.status(200).json(dataId);
   } catch (error) {
-  console.log('🚀 ~ getById Product error', error);
+    console.log('🚀 ~ getById Product error', error);
   }
 };
 
@@ -32,7 +32,7 @@ const postProduct = async (req, res) => {
 
     res.status(201).json(newProduct);
   } catch (error) {
-  console.log('🚀 ~ postProduct error', error);
+    console.log('🚀 ~ postProduct error', error);
   }
 };
 
@@ -46,7 +46,7 @@ const putProduct = async (req, res) => {
     if (!updProduct.id) {
       return res.status(404).json({ message: 'Product not found' });
     }
-    
+
     return res.status(200).json(updProduct);
   } catch (error) {
     console.log('🚀 ~ putProduct error', error);
@@ -65,7 +65,7 @@ const deleteProduct = async (req, res) => {
 
     return res.status(204).end();
   } catch (error) {
-  console.log('🚀 ~ error', error);
+    console.log('🚀 ~ error', error);
   }
 };
 

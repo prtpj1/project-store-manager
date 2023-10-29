@@ -8,13 +8,13 @@
     "npm": ">=7.0.0"
   },
   "scripts": {
-    "test": "jest --config ./jest.config.js --runInBand --detectOpenHandles",
-    "test:mocha": "nyc --all --include models --include services --include controllers mocha tests/unit/**/*.js --exit",
+    "test": "nyc --all --include models --include services --include controllers mocha tests/unit/**/*.js --exit",
     "start": "node index.js",
     "debug": "nodemon --ignore coverage index.js",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx",
     "migration": "mysql -u root -p -e \"source migration.sql\"",
-    "seed": "mysql -u root -p StoreManager < seed.sql"
+    "seed": "mysql -u root -p StoreManager < seed.sql",
+    "swagger": "node ./swagger/swagger.js"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,8 @@
     "express-rescue": "^1.1.26",
     "joi": "^17.6.0",
     "mysql2": "^2.3.0",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
     "chai": "^4.3.4",
@@ -46,6 +47,7 @@
     "nodemon": "^2.0.4",
     "nyc": "^15.1.0",
     "sinon": "^11.1.1",
-    "supertest": "^6.2.2"
+    "supertest": "^6.2.2",
+    "swagger-autogen": "^2.23.7"
   }
 }
