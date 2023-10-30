@@ -292,3 +292,6 @@ $RECYCLE.BIN/
 
 coverage
 .nyc*
+
+###
+./mysql/data
