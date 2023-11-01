@@ -294,4 +294,4 @@ coverage
 .nyc*
 
 ###
-./mysql/data
+/mysql/data
