@@ -37,16 +37,17 @@ Foi utilizado um banco de dados MySQL para a gestão dos dados.<br>
 
 ## Tecnologias Utilizadas
 ### BackEnd:
+- Docker
 - MySQL
 - Node.js
 
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/mySQL2.png?raw=true" width="50" height="50" alt="MySQL Icon" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/NodeJS2.png?raw=true" width="50" height="50" alt="NodeJS Icon" /></a>
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Docker2.png?raw=true" width="50" height="50" alt="Docker Icon" /></a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/mySQL2.png?raw=true" width="50" height="50" alt="MySQL Icon" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/NodeJS2.png?raw=true" width="50" height="50" alt="NodeJS Icon" /></a>
 <hr/>
 
-## Como rodar a aplicação?
+## Como rodar a aplicação localmente?
 - O MySQL precisa estar rodando na sua máquina
 - ⚠️ Se estiver no Windows, pare o MySQL do Windows, pois usará o MySQL da sua distro Linux através do WSL2
-- Clone o repositório: <br> proprio
+- Clone o repositório: <br>
 `git clone git@github.com:prtpj1/project-project-store-manager.git`
 - Acesse a pasta do projeto: <br>
 `cd project-project-store-manager`
@@ -60,12 +61,34 @@ Foi utilizado um banco de dados MySQL para a gestão dos dados.<br>
 `npm run seed`
 - Inicie o programa: <br>
 `npm start`
+- Acesse o link abaixo para acessar as rotas e testa-las: <br>
+http://localhost:3000/api-docs/
+<hr/>
+
 - Você poderá ver a cobertura de testes através do comando: <br>
 `npm test`
-- Abra o programa para fazer requisições HTTP. Eu usei o Insomnia, mas você pode usar: o Postman, Extensões do VSCode ou qualquer outra que preferir. <br><br>
-- No programa escolhido, crie as requisições do CRUD como explicado abaixo:<br>
+<hr/>
 
-### ♻️ Listar todos os produtos:
+## Como rodar a aplicação via Docker?
+- Confirme que o Docker está rodando no seu computador <br>
+`sudo systemctl status docker`⚠️ Se estiver no windows, basta abrir o Docker Desktop<br>
+- Clone o repositório: <br>
+`git clone git@github.com:prtpj1/project-project-store-manager.git`
+- Acesse a pasta do projeto: <br>
+`cd project-project-store-manager`
+- Suba o container para o Docker: <br>
+`docker-compose up -d`
+- Acesse o terminal do container no Docker: <br>
+`docker exec -it store_manager bash`
+- Instale as dependências no terminal do container docker: <br>
+`npm install`
+- Inicie o programa no terminal do container docker: <br>
+`npm start`
+- Acesse o link abaixo para acessar as rotas e testa-las: <br>
+http://localhost:3000/api-docs/
+
+
+<!-- ### ♻️ Listar todos os produtos:
 ➡️ Endpoint: **GET** `http://localhost:3000/products` <br>
 <hr/>
 
@@ -109,6 +132,6 @@ Em **Body** selecione JSON e coloque o JSON abaixo, alterando nome de um produto
 ➡️ Endpoint: **GET** `http://localhost:3000/sales/1` <br>
 ⚠️ _*O id é o numero no final do endpoint*_
 <br>
-
+-->
 
 _*OBS: Se tiver alguma dificuldade com as instruções e quiser dar um feedback me mande uma mensagem*_
