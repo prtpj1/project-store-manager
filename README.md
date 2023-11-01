@@ -86,6 +86,8 @@ http://localhost:3000/api-docs/
 `npm start`
 - Acesse o link abaixo para acessar as rotas e testa-las: <br>
 http://localhost:3000/api-docs/
+<img src="https://github.com/prtpj1/project-store-manager/blob/main/images/swagger_example.png?raw=true" alt="swagger-example" />
+<img src="https://github.com/prtpj1/project-store-manager/blob/main/images/swagger_example_getall.png?raw=true" alt="swagger-example_getall route" />
 
 
 <!-- ### ♻️ Listar todos os produtos:
