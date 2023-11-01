@@ -13,7 +13,7 @@ const salesRouter = require('./routes/salesRoutes');
 const errorMiddleware = require('./middlewares/errorMiddleware');
 
 app.get('/', (_request, response) => {
-  response.send();
+  response.send('Hello World!');
 });
 
 app.use('/products', productsRouter);
@@ -21,8 +21,9 @@ app.use('/sales', salesRouter);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(errorMiddleware);
-module.exports = app;
 
 app.listen(process.env.PORT, () => {
   console.log(`Escutando na porta ${process.env.PORT}`);
 });
+
+module.exports = app;
