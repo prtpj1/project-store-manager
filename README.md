@@ -78,12 +78,6 @@ http://localhost:3000/api-docs/
 `cd project-project-store-manager`
 - Suba o container para o Docker: <br>
 `docker-compose up -d`
-- Acesse o terminal do container no Docker: <br>
-`docker exec -it store_manager bash`
-- Instale as dependências no terminal do container docker: <br>
-`npm install`
-- Inicie o programa no terminal do container docker: <br>
-`npm start`
 - Acesse o link abaixo para acessar as rotas e testa-las: <br>
 http://localhost:3000/api-docs/
 <img src="https://github.com/prtpj1/project-store-manager/blob/main/images/swagger_example.png?raw=true" alt="swagger-example" />
