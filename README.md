@@ -44,7 +44,9 @@ Foi utilizado um banco de dados MySQL para a gestão dos dados.<br>
 <a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Docker2.png?raw=true" width="50" height="50" alt="Docker Icon" /></a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/mySQL2.png?raw=true" width="50" height="50" alt="MySQL Icon" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/NodeJS2.png?raw=true" width="50" height="50" alt="NodeJS Icon" /></a>
 <hr/>
 
-## Como rodar a aplicação localmente?
+## Como rodar a aplicação?
+
+#### Rodando localmente
 - O MySQL precisa estar rodando na sua máquina
 - ⚠️ Se estiver no Windows, pare o MySQL do Windows, pois usará o MySQL da sua distro Linux através do WSL2
 - Clone o repositório: <br>
@@ -69,7 +71,7 @@ http://localhost:3000/api-docs/
 `npm test`
 <hr/>
 
-## Como rodar a aplicação via Docker?
+#### :whale: Rodando com Docker
 - Confirme que o Docker está rodando no seu computador <br>
 `sudo systemctl status docker`⚠️ Se estiver no windows, basta abrir o Docker Desktop<br>
 - Clone o repositório: <br>
